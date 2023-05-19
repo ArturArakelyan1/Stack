@@ -8,7 +8,7 @@ class Stack : private Vector<T>{
    using Vector<T>::GetData;
 
     public:
-    void PushBackSt(int val)
+    void PushBackSt(T val)
     {
         PushBack(val);
     }
@@ -16,7 +16,7 @@ class Stack : private Vector<T>{
     {
         PopBack();
     }
-    T FindSt(int val)
+    T FindSt(T val)
     {
         Find(val);
     }
