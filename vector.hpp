@@ -23,11 +23,11 @@ public:
     {
         return m_data;
     }
-    T GetCapacity()
+    int GetCapacity()
     {
         return m_capacity;
     }
-    T GetTopindex()
+    int GetTopindex()
     {
         return m_topindex;
     }
@@ -39,12 +39,12 @@ public:
     {
         m_capacity = m;
     }
-    void SetTopindex(T i)
+    void SetTopindex(int i)
     {
         m_topindex = i;
     }
 
-    void PushBack(int value)
+    void PushBack(T value)
     {
         if(m_topindex == m_capacity - 1)
         {
@@ -78,7 +78,7 @@ public:
         
     }
 
-     T Find( int vlaue)
+     T Find( T vlaue)
     {
         for (size_t first = 0; first != m_topindex; first++)
         {
@@ -108,31 +108,3 @@ T& operator[](int index)
     return m_data[index];
 }
 };
-
-// //     template<typename T>
-// // void print(T const & xs)
-// // {
-// //     std::cout << "[ ";
-// //     for(auto const & x : xs) {
-// //         std::cout << x << ' ';
-// //     }
-// //     std::cout << "]\n";
-// // }
-// int main()
-// {
-//     int size = 3;
-//     Vector<int> numbers(size); 
-//     numbers.PushBack(5);
-//     numbers.PushBack(3);
-//     numbers.PushBack(4);
-//     for (size_t i = 0; i < size; i++)
-//     {
-//         std::cout << numbers[i];
-//     }
-    
-//     numbers.PopBack();
- 
-//     for (size_t i = 0; i < size  ; i++)
-//     {
-//         std::cout << numbers[i];
-//     }}
